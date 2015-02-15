@@ -1,3 +1,4 @@
+whitenoise
 Django==1.7.4
 Pillow==2.7.0
 dj-database-url==0.3.0
