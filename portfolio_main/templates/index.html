@@ -2,183 +2,198 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Travis Cockcroft</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Travis Cockcroft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<!-- stylesheets -->
-   	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/stylish.css' %}">
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/compiled/stylish.css' %}">
 
-	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/animate.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
 
-	<!-- javascript -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
-	<script src="{% static 'js/theme.js' %}"></script>
+    <!-- javascript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
 
-	<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js' %}"></script>
     <![endif]-->
 </head>
 <body id="home">
-	<header class="navbar navbar-inverse hero" role="banner">
-  		<div class="container">
-    		<div class="navbar-header">
-		      	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		      	</button>
-      			<a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>
-    		</div>
-    		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      			<ul class="nav navbar-nav navbar-right">
+<header class="navbar navbar-inverse hero" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
 
-                    <li><a href="{% url 'about' %}"> About</a></li>
+                <li><a href="{% url 'about' %}"> About</a></li>
 
-        			<li class="dropdown">
-        				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          					Portfolio <b class="caret"></b>
-          				</a>
-          				<ul class="dropdown-menu">
-							<li><a href="{% url 'resume' %}">Resume</a></li>
-							<li><a href="{% url 'portfolio' %}">Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Portfolio <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'resume' %}">Resume</a></li>
+                        <li><a href="{% url 'portfolio' %}">Projects</a></li>
 
-				        </ul>
-        			</li>
+                    </ul>
+                </li>
 
-							<li><a href="{% url 'blog' %}">Blog</a></li>
-      			</ul>
-    		</nav>
-  		</div>
-	</header>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-	<div id="hero">
-		<div class="container">
-			<h1 class="hero-text animated fadeInDown">
-				Welcome to my portfolio <br />
+<div id="hero">
+    <div class="container">
+        <h1 class="hero-text animated fadeInDown">
+            Welcome to my portfolio <br/>
 
-			</h1>
-			<p class="sub-text animated fadeInDown">
-				Young professional working in the San Francisco Bay Area.
-			</p>
-			<div class="cta animated fadeInDown">
-				<a href="{% url 'about' %}" class="button-outline">Learn about me</a>
-			</div>
-			<div class="img"></div>
-		</div>
-	</div>
+        </h1>
 
-	<div id="features">
-		<div class="container">
-			<div class="row header">
-				<div class="col-md-12">
-					<h2>Optimization Analyst, data nerd, entrepreneur, and junior web developer!</h2>
-					<p>Yep, it sounds like a lot, but I love them all!</p>
-				</div>
-			</div>
-			<div class="row feature">
-				<div class="col-md-6 info">
-					<h4>Just a little bit about me...</h4>
-					<p>
-						I am a learner! I also have a new book I am reading, I religiously take classes from MOOC's, and I am
-                        constantly trying to learn and advance my technological knowledge.
-					</p>
-					<p>
-						I am highly rationale, I believe in data and data driven decisions. I often test into the ENTJ
-                        & INTJ personality types. I love to work on big projects with tight deadlines. I enjoy creating
-                        new ways to be more efficient.
-					</p>
-                   	<a href="{% url 'about' %}" class="button">Want to learn more?</a>
-<br>
-				</div>
-				<div class="col-md-6 image">
-                    <br>
-					<img src="{% static 'img/headshot.png' %}" class="img-responsive" alt="feature1" />
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="row feature backwards">
-				<div class="col-md-6 info">
-                    <h4>Just like everyone else, my story is highly unique. This site is just a snapshot into who I am. </h4>
-					<p>
-						I am not the highly active blogger, but I try my best to put out quality over quantity.
+        <p class="sub-text animated fadeInDown">
+            Young professional working in the San Francisco Bay Area.
+        </p>
 
-					</p>
-                    <p>Please head over to the blog to read some of them. Please subscribe if you like them!</p>
-                    <br>
-                                       	<a href="{% url 'blog' %}" class="button">Head over to the blog</a>
+        <div class="cta animated fadeInDown">
+            <a href="{% url 'about' %}" class="button-outline">Learn about me</a>
+        </div>
+        <div class="img"></div>
+    </div>
+</div>
 
-				</div>
-				<div class="col-md-6 image">
-                    <br>
-					<img src="{% static 'img/Plan_A.png' %}" class="img-responsive" alt="feature2" />
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="features">
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-12">
+                <h2>Optimization Analyst, data nerd, entrepreneur, and junior web developer!</h2>
 
-	<div id="pricing">
-		<!-- Services -->
+                <p>Yep, it sounds like a lot, but I love them all!</p>
+            </div>
+        </div>
+        <div class="row feature">
+            <div class="col-md-6 info">
+                <h4>Just a little bit about me...</h4>
+
+                <p>
+                    I am a learner! I also have a new book I am reading, I religiously take classes from MOOC's, and I
+                    am
+                    constantly trying to learn and advance my technological knowledge.
+                </p>
+
+                <p>
+                    I am highly rationale, I believe in data and data driven decisions. I often test into the ENTJ
+                    & INTJ personality types. I love to work on big projects with tight deadlines. I enjoy creating
+                    new ways to be more efficient.
+                </p>
+                <a href="{% url 'about' %}" class="button">Want to learn more?</a>
+                <br>
+            </div>
+            <div class="col-md-6 image">
+                <br>
+                <img src="{% static 'img/headshot.png' %}" class="img-responsive" alt="feature1"/>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row feature backwards">
+            <div class="col-md-6 info">
+                <h4>Just like everyone else, my story is highly unique. This site is just a snapshot into who I
+                    am. </h4>
+
+                <p>
+                    I am not the highly active blogger, but I try my best to put out quality over quantity.
+
+                </p>
+
+                <p>Please head over to the blog to read some of them. Please subscribe if you like them!</p>
+                <br>
+                <a href="{% url 'blog' %}" class="button">Head over to the blog</a>
+
+            </div>
+            <div class="col-md-6 image">
+                <br>
+                <img src="{% static 'img/Plan_A.png' %}" class="img-responsive" alt="feature2"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pricing">
+    <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-{#    <section id="services" class="services bg-primary">#}
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Some of my best skills</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+    {#    <section id="services" class="services bg-primary">#}
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Some of my best skills</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <img class="img-thumbnail skillsPhoto" src="{% static 'img/big_data.png' %}">
                             </span>
-                                <h4>
-                                    <strong>Data Analysis</strong>
-                                </h4>
-                                <p>Whether small data or big data, I just want to dig right in and get to work.
-                                    I love to connect the dots through statistical
-                                    analysis and data visualization. I strive to tell wonderful and colorful stories through
-                                    my data analysis.
-                                    Always working to get better each day, luckily I have a great job to do just that!</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Data Analysis</strong>
+                            </h4>
+
+                            <p>Whether small data or big data, I just want to dig right in and get to work.
+                                I love to connect the dots through statistical
+                                analysis and data visualization. I strive to tell wonderful and colorful stories through
+                                my data analysis.
+                                Always working to get better each day, luckily I have a great job to do just that!</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                           <img class="img-thumbnail skillsPhoto" src="{% static 'img/django.png' %}">
 
                             </span>
-                                <h4>
-                                    <strong>Python Programming</strong>
-                                </h4>
-                                <p>This site is all built in django!  Programming is one
-                                    of my favorite hobbies, and has come in handy in work too! I can quickly whip up a minimum
-                                    viable product (MVP) and present it. Python is great in data analysis as both an alternative to R, and
-                                    a way to clean data from NoSQL databases. </p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Python Programming</strong>
+                            </h4>
+
+                            <p>This site is all built in django! Programming is one
+                                of my favorite hobbies, and has come in handy in work too! I can quickly whip up a
+                                minimum
+                                viable product (MVP) and present it. Python is great in data analysis as both an
+                                alternative to R, and
+                                a way to clean data from NoSQL databases. </p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                            <img class="img-thumbnail skillsPhoto" src="{% static 'img/innovation.png' %}">
 
                             </span>
-                                <h4>
-                                    <strong>Innovation</strong>
-                                </h4>
-                                <p>No shortage of ideas here! I love to fix efficiency issues for myself and my coworkers. I
-                                    believe technology is here to help us and not replace us. All my skills together help
-                                    me execute my wild and innovative ideas. One of my ideas helped me win a business competition in
-                                    front of angel investors!</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
+                            <h4>
+                                <strong>Innovation</strong>
+                            </h4>
+
+                            <p>No shortage of ideas here! I love to fix efficiency issues for myself and my coworkers. I
+                                believe technology is here to help us and not replace us. All my skills together help
+                                me execute my wild and innovative ideas. One of my ideas helped me win a business
+                                competition in
+                                front of angel investors!</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
                         </div>
+                    </div>
 
                     <!-- /.row (nested) -->
                 </div>
@@ -187,86 +202,87 @@
             <!-- /.row -->
         </div>
         <!-- /.container -->
-	</div>
- </div>
+    </div>
+</div>
 
-	<div id="slider">
-		<div class="container">
-			<div class="row header">
-				<div class="col-md-12">
-					<h3>My Projects</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 slide-wrapper">
-					<div class="slideshow">
-						<div class="btn-nav prev"></div>
-						<div class="btn-nav next"></div>
-						<div class="slide active">
-							<img src="{% static 'img/innovation.png' %}" alt="slide3" />
-						</div>
-						<div class="slide">
-							<img src="{% static 'img/big_data.png' %}" alt="slide4" />
-						</div>
-						<div class="slide">
-							<img src="{% static 'img/Plan_A.png' %}" alt="slide1" />
-						</div>
+<div id="slider">
+    <div class="container">
+        <div class="row header">
+            <div class="col-md-12">
+                <h3>My Projects</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 slide-wrapper">
+                <div class="slideshow">
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div id="cta">
-		<p>
-			Head over to my projects page for more!
-		</p>
-		<a href="{% url 'portfolio' %}">
-			Portfolio
-		</a>
-	</div>
-
-	<div id="clients">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Connect with me</h3>
-					<p>
-						These are some of our customers who have helped us by using our product.
-					</p>
-					<div class="logos">
-						<img src="images/logos/google.png">
-						<img src="images/logos/facebook.png">
-						<img src="images/logos/apple.png">
-						<img src="images/logos/stripe.png">
-						<img src="images/logos/yahoo.png">
-					</div>
+                    <div class="slide active">
+                        <a target="_blank" href="https://wealthconcierge.herokuapp.com"><img src="{% static 'img/wealthy.png' %}"  alt="slide3"/></a>
                     </div>
-                    <div  class="col-sm-6 col-sm-offset-3 newsletter" >
-                    <div class="signup clearfix">
-						<p>
-							Sign up for blog updates and technology news.
-						</p>
-						<form>
-							<input type="text" name="email" class="form-control newsletter" placeholder="Your email address" />
-							<input type="submit" value="Sign up" />
-						</form>
-					</div>
-				</div>
-                <div class="row credits">
-				<div class="col-md-12">
-					Copyright © 2015. Travis Cockcroft
-				</div>
-			</div>
-			</div>
-		</div>
-	</div>
+                    <div class="slide">
+                        <a target="_blank" href="https://bookitquick.herokuapp.com"><img src="{% static 'img/bookit.png' %}" alt="slide4"/></a>
+                    </div>
+                    <div class="slide">
+                        <a target="_blank" href="https://hobbyswap.herokuapp.com"><img src="{% static 'img/hobbyswap.png' %}" alt="slide1"/></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-		</div>
-	</div>
+<div id="cta">
+    <p>
+        Head over to my projects page for more!
+    </p>
+    <a href="{% url 'portfolio' %}">
+        Projects
+    </a>
+</div>
+
+<div id="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Connect with me</h3>
+
+                <p>
+                    I am always interested in meeting new people please feel free to reach out.
+                </p>
+
+                <div class="logos">
+                    <img src="images/logos/google.png">
+                    <img src="images/logos/facebook.png">
+                    <img src="images/logos/apple.png">
+                    <img src="images/logos/stripe.png">
+                    <img src="images/logos/yahoo.png">
+                </div>
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 newsletter">
+                <div class="signup clearfix">
+                    <p>
+                        Sign up for blog updates and technology news.
+                    </p>
+
+                    <form>
+                        <input type="text" name="email" class="form-control newsletter"
+                               placeholder="Your email address"/>
+                        <input type="submit" value="Sign up"/>
+                    </form>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="col-md-12">
+                    Copyright © 2015. Travis Cockcroft
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 </html>
