@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-
+{%  block meta %}
 <!DOCTYPE html>
 <html class="bg">
 <head>
@@ -12,6 +13,10 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/brankic.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/isotope.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 
 	<!-- javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -24,39 +29,10 @@
     <![endif]-->
 </head>
 <body id="portfolio">
-	<header class="navbar navbar-inverse normal" role="banner">
-  		<div class="container">
-    		<div class="navbar-header">
-		      	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		      	</button>
-      				<a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>
-        </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav navbar-right">
-
-                <li><a href="{% url 'about' %}"> About</a></li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Portfolio <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{% url 'resume' %}">Resume</a></li>
-                        <li><a href="{% url 'portfolio' %}">Projects</a></li>
-
-                    </ul>
-                </li>
-
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-            </ul>
-    		</nav>
-  		</div>
-	</header>
+{% endblock %}
 
 
+{% block content %}
 	<div id="showcase">
 		<div class="container">
 			<div class="row header">
@@ -128,33 +104,4 @@
 		</div>
 	</div>
 
-
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3 copyright">
-					Travis Cockcroft 2015
-				</div>
-				<div class="col-sm-9  menu ">
-					<ul>
-	      				<li>
-	          				<a target="_blank" href="https://linkedin.com/in/traviscockcroft">LinkedIn</a>
-	        			</li>
-	        			<li>
-	        				<a target="_blank" href="https://github.com/travis6888">Github</a>
-	        			</li>
-	        			<li >
-	          				<a target="_blank" href="https://twitter.com/travi88">Twitter</a>
-	        			</li>
-
-	        			<li>
-	          				<a href="mailto:travis@traviscockcroft.com">Email</a>
-	        			</li>
-	      			</ul>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+{% endblock %}

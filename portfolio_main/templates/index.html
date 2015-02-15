@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- javascript -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -39,18 +40,18 @@
 
                 <li><a href="{% url 'about' %}"> About</a></li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Portfolio <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{% url 'resume' %}">Resume</a></li>
+{#                <li class="dropdown">#}
+{#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">#}
+{#                        Portfolio <b class="caret"></b>#}
+{#                    </a>#}
+{#                    <ul class="dropdown-menu">#}
+{#                        <li><a href="{% url 'resume' %}">Resume</a></li>#}
                         <li><a href="{% url 'portfolio' %}">Projects</a></li>
 
-                    </ul>
-                </li>
+{#                    </ul>#}
+{#                </li>#}
 
-                <li><a href="{% url 'blog' %}">Blog</a></li>
+{#                <li><a href="{% url 'blog' %}">Blog</a></li>#}
             </ul>
         </nav>
     </div>
@@ -106,27 +107,27 @@
                 <img src="{% static 'img/headshot.png' %}" class="img-responsive" alt="feature1"/>
             </div>
         </div>
-        <div class="divider"></div>
-        <div class="row feature backwards">
-            <div class="col-md-6 info">
-                <h4>Just like everyone else, my story is highly unique. This site is just a snapshot into who I
-                    am. </h4>
-
-                <p>
-                    I am not the highly active blogger, but I try my best to put out quality over quantity.
-
-                </p>
-
-                <p>Please head over to the blog to read some of them. Please subscribe if you like them!</p>
-                <br>
-                <a href="{% url 'blog' %}" class="button">Head over to the blog</a>
-
-            </div>
-            <div class="col-md-6 image">
-                <br>
-                <img src="{% static 'img/Plan_A.png' %}" class="img-responsive" alt="feature2"/>
-            </div>
-        </div>
+{#        <div class="divider"></div>#}
+{#        <div class="row feature backwards">#}
+{#            <div class="col-md-6 info">#}
+{#                <h4>Just like everyone else, my story is highly unique. This site is just a snapshot into who I#}
+{#                    am. </h4>#}
+{##}
+{#                <p>#}
+{#                    I am not the highly active blogger, but I try my best to put out quality over quantity.#}
+{##}
+{#                </p>#}
+{##}
+{#                <p>Please head over to the blog to read some of them. Please subscribe if you like them!</p>#}
+{#                <br>#}
+{#                <a href="{% url 'blog' %}" class="button">Head over to the blog</a>#}
+{##}
+{#            </div>#}
+{#            <div class="col-md-6 image">#}
+{#                <br>#}
+{#                <img src="{% static 'img/Plan_A.png' %}" class="img-responsive" alt="feature2"/>#}
+{#            </div>#}
+{#        </div>#}
     </div>
 </div>
 
@@ -253,26 +254,25 @@
                 </p>
 
                 <div class="logos">
-                    <img src="images/logos/google.png">
-                    <img src="images/logos/facebook.png">
-                    <img src="images/logos/apple.png">
-                    <img src="images/logos/stripe.png">
-                    <img src="images/logos/yahoo.png">
+    <a target="_blank" href="https://github.com/travis6888" class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a>
+    <a target="_blank" href="https://www.linkedin.com/in/traviscockcroft" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+    <a target="_blank" href="https://twitter.com/travi88" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-3 newsletter">
-                <div class="signup clearfix">
-                    <p>
-                        Sign up for blog updates and technology news.
-                    </p>
-
-                    <form>
-                        <input type="text" name="email" class="form-control newsletter"
-                               placeholder="Your email address"/>
-                        <input type="submit" value="Sign up"/>
-                    </form>
-                </div>
-            </div>
+{#            <div class="col-sm-6 col-sm-offset-3 newsletter">#}
+{#                <div class="signup clearfix">#}
+{#                    <p>#}
+{#                        Sign up for blog updates and technology news.#}
+{#                    </p>#}
+{##}
+{#                    <form>#}
+{#                        <input type="text" name="email" class="form-control newsletter"#}
+{#                               placeholder="Your email address"/>#}
+{#                        <input type="submit" value="Sign up"/>#}
+{#                    </form>#}
+{#                </div>#}
+{#            </div>#}
+            <br>
             <div class="row credits">
                 <div class="col-md-12">
                     Copyright © 2015. Travis Cockcroft

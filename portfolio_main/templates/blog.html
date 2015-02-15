@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-
+{% block meta %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/icomoon.css' %}">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 
 	<!-- javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -23,6 +26,7 @@
     <![endif]-->
 </head>
 <body id="blog">
+{% endblock %}
 	<header class="navbar navbar-inverse normal" role="banner">
   		<div class="container">
     		<div class="navbar-header">
@@ -54,7 +58,7 @@
     		</nav>
   		</div>
 	</header>
-
+{% block content %}
 	<div id="posts">
 		<div class="container">
 			<div class="row">
@@ -184,43 +188,7 @@
 		</div>
 	</div>
 
-
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3 copyright">
-					React © 2014
-				</div>
-				<div class="col-sm-6 menu">
-					<ul>
-	      				<li>
-	          				<a href="features.html">Features</a>
-	        			</li>
-	        			<li>
-	        				<a href="services.html">Services</a>
-	        			</li>
-	        			<li>
-	          				<a href="pricing.html">Pricing</a>
-	        			</li>
-	        			<li>
-	          				<a href="support.html">Support</a>
-	        			</li>
-	        			<li class="active">
-	          				<a href="blog.html">Blog</a>
-	        			</li>
-	      			</ul>
-				</div>
-				<div class="col-sm-3 social">
-					<a href="#">
-						<img src="images/social/social-tw.png" alt="twitter" />
-					</a>
-					<a href="#">
-						<img src="images/social/social-dbl.png" alt="dribbble" />
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+{% endblock %}
 
 	<script type="text/javascript">
 		$(function () {
