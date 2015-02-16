@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'blog',
     'data_viz',
     'storages',
+    'boto',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -112,10 +113,7 @@ STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
 # MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
+
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
@@ -137,3 +135,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
