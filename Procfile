@@ -1,2 +1,1 @@
-web: gunicorn final_portfolio.wsgi --log-file
-web: python manage.py runserver 0.0.0.0:$PORT --noreload
+web: gunicorn formal_portfolio.wsgi --log-file
