@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'portfolio_main',
     'blog',
     'data_viz',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,24 +89,27 @@ STATICFILES_DIRS = (os.path.join(os.path.dirname(__file__),'static'),)
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, "static", *MEDIA_URL.strip("/").split("/"))
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, "formal_portfolio/static", *MEDIA_URL.strip("/").split("/"))
 
-# ###################
-# # S3 STATIC FILES #
-# ###################
-#
-# AWS_QUERYSTRING_AUTH = False
-# AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-# AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-# AWS_STORAGE_BUCKET_NAME = 'travisportfolio'
-# AWS_PRELOAD_METADATA = True #helps collectstatic do updates
-#
-# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-#
+
+
+###################
+# S3 STATIC FILES #
+###################
+
+AWS_QUERYSTRING_AUTH = False
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = 'travisportfolio'
+AWS_PRELOAD_METADATA = True #helps collectstatic do updates
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
 # STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
+STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
-#
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 # MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
 try:
@@ -132,4 +136,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
