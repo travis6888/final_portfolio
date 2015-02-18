@@ -1,109 +1,121 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{%  block meta %}
-<!DOCTYPE html>
-<html class="bg">
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Travis Cockcroft -Projects</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% block meta %}
+    <!DOCTYPE html>
+    <html class="bg">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Travis Cockcroft -Projects</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-	<!-- stylesheets -->
-	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/brankic.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/isotope.css' %}">
+        <!-- stylesheets -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/brankic.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/isotope.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 
+        <!-- javascript -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.isotope.min.js' %}"></script>
+        <script src="{% static 'js/ga.js' %}"></script>
 
-	<!-- javascript -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
-	<script src="{% static 'js/theme.js' %}"></script>
-	<script src="{% static 'js/vendor/jquery.isotope.min.js' %}"></script>
-    <script src="{% static 'js/ga.js' %}"></script>
 
-
-	<!--[if lt IE 9]>
+        <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js' %}"></script>
     <![endif]-->
-</head>
-<body id="portfolio">
+    </head>
+    <body id="portfolio">
 {% endblock %}
 
 
 {% block content %}
-	<div id="showcase">
-		<div class="container">
-			<div class="row header">
-				<div class="col-md-12">
-					<h3>My Projects</h3>
-					<p>Here are few of my projects that I have built with my web development experience. All my projects
-                    also highlight my business acumen because all of them are actually minimum viable products of my wild ideas!</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="project">
-						<h3>Wealth Concierge </h3>
-						<div class="screen">
-							<img src="{% static 'img/wealthy.png' %}" class="img-responsive" alt="portfolio1" />
-						</div>
-						<p class="description">
-							You can either take a Demo or log in to see the full features.
+    <div id="showcase">
+        <div class="container">
+            <div class="row header">
+                <div class="col-md-12">
+                    <h3>My Projects</h3>
+
+                    <p>Here are a few of my projects that I have built with my web development experience. All my
+                        projects
+                        also highlight my business acumen because all of them are actually minimum viable products of my
+                        wild ideas!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="project">
+                        <h3>Wealth Concierge </h3>
+
+                        <div class="screen">
+                            <img src="{% static 'img/wealthy.png' %}" class="img-responsive" alt="portfolio1"/>
+                        </div>
+                        <p class="description">
+
                             Wealth Concierge recommends portfolios based on a proprietary algorithm that finds
                             your risk profile and takes into account factors such as income, housing costs, and age.
-                            Find your portfolio today!
-						</p>
-						<div class="divider"></div>
-						<div class="visit">
-							<a class="button" target="_blank" href="https://wealthconcierge.herokuapp.com">
-								Visit Project Website
-							</a>
-						</div>
-					</div>
-					<div class="project">
-						<h3>BookIt</h3>
-						<div class="screen">
-							<img src="{% static 'img/bookit.png' %}" class="img-responsive" alt="portfolio2" />
-						</div>
-						<p class="description">
-                        Trying to plan events can be time consuming. BookIt helps you find events that fit your
+                            Find your portfolio today! You can either take a Demo or log in to see the full features.
+                        </p>
+
+                        <div class="divider"></div>
+                        <div class="visit">
+                            <a class="button" target="_blank" href="https://wealthconcierge.herokuapp.com">
+                                Visit Project Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>BookIt</h3>
+
+                        <div class="screen">
+                            <img src="{% static 'img/bookit.png' %}" class="img-responsive" alt="portfolio2"/>
+                        </di
+                            v>
+                        <p class="description">
+                            Trying to plan events can be time consuming. BookIt helps you find events that fit your
                             schedule. BookIt is synced with Google Calendar and searches for events via meetup,
-                            eventbrite, and more to get events based on the hours you are free and the activities
-                            you choose! Invite your friends and family to find events that work for both of your
-                            schedules too!
-						</p>
-						<div class="divider"></div>
-						<div class="visit">
-							<a class="button" target="_blank" href="https://bookitquick.herokuapp.com">
-								Visit Project Website
-							</a>
-						</div>
-					</div>
-					<div class="project">
-						<h3>HobbySwap</h3>
-						<div class="screen">
-							<img src="{% static 'img/hobbyswap.png' %}" class="img-responsive" alt="portfolio3" />
-						</div>
-						<p class="description">
-                        Look in your garage or shed! I bet you have some unused expensive hobby items.
+                            eventbrite, and more to get events based on the difference between two of your calendar
+                            appointments and
+                            what interests and activities
+                            you choose in your profile! Invite your friends and family to find events that work for both
+                            of your
+                            schedules!
+                        </p>
+
+                        <div class="divider"></div>
+                        <div class="visit">
+                            <a class="button" target="_blank" href="https://bookitquick.herokuapp.com">
+                                Visit Project Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>HobbySwap</h3>
+
+                        <div class="screen">
+                            <img src="{% static 'img/hobbyswap.png' %}" class="img-responsive" alt="portfolio3"/>
+                        </div>
+                        <p class="description">
+                            Look in your garage or shed! I bet you have some unused expensive hobby items.
                             I know I have quite a few. HobbySwap makes it easy to rent out those hobby items.
                             While also allowing others to try new hobbies or use some of best equipment for a fraction
                             of the cost. Similar to the other sharing sites out there like AirBnb or RelayRides.
-						</p>
-						<div class="divider"></div>
-						<div class="visit">
-							<a class="button" target="_blank" href="https://hobbyswap.herokuapp.com">
-								Visit Project Website
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                        </p>
 
+                        <div class="divider"></div>
+                        <div class="visit">
+                            <a class="button" target="_blank" href="https://hobbyswap.herokuapp.com">
+                                Visit Project Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
