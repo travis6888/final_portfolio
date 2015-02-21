@@ -74,7 +74,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-{#                    {% for post in blog %}#}
 					<div class="main-pic">
 						<img src="{{ blog.img }}" class="img-responsive" alt="blogpost" />
 					</div>
@@ -86,7 +85,6 @@
 						{{blog.title }}
 					</div>
 					<div class="author">
-						<img src="" class="avatar" alt="author" />
 						By {{ blog.author }}, {{ blog.created }}
 					</div>
 					<div class="content">
@@ -106,9 +104,7 @@
 						</p>
 
 					</div>
-					<div class="share">
-						<img src="images/share.png" alt="share" />
-					</div>
+
 					<div class="other-posts">
 						<a href="{% url 'blog' %}" class="prev">
 							← Return to blogs

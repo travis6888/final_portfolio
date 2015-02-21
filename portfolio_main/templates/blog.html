@@ -1,44 +1,44 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block meta %}
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Travis Cockcroft - Blog</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={{ info.description }} />
-    <meta name="keywords" content={{ info.tags }} />
-    <meta name="robots" content="index, follow" />
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Travis Cockcroft - Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content={{ info.description }}/>
+        <meta name="keywords" content={{ info.tags }}/>
+        <meta name="robots" content="index, follow"/>
 
-	<!-- stylesheets -->
-	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/icomoon.css' %}">
+        <!-- stylesheets -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/icomoon.css' %}">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-	<!-- javascript -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
-	<script src="{% static 'js/theme.js' %}"></script>
+        <!-- javascript -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
 
-	<!--[if lt IE 9]>
+        <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
-<body id="blog">
+    </head>
+    <body id="blog">
 {% endblock %}
-	<header class="navbar navbar-inverse normal" role="banner">
-  		<div class="container">
-    		<div class="navbar-header">
-		      	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		      	</button>
-      				<a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>
+<header class="navbar navbar-inverse normal" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
@@ -58,89 +58,91 @@
 
                 <li><a href="{% url 'blog' %}">Blog</a></li>
             </ul>
-    		</nav>
-  		</div>
-	</header>
+        </nav>
+    </div>
+</header>
 {% block content %}
-	<div id="posts">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-9">
+    <div id="posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
                     {% for post in blogs %}
 
-					<div class="post">
-						<a href="{% url 'blog_post' post.id  %}" class="pic">
-							<img src="{{ post.img }}" class="img-responsive" alt="blogpost" />
-						</a>
+                        <div class="post">
+                            <a href="{% url 'blog_post' post.id %}" class="pic">
+                                <img src="{{ post.img }}" class="img-responsive" alt="blogpost"/>
+                            </a>
 
-						<div class="title">
-							<a href="{% url 'blog_post' post.id  %}">{{ post.title }}</a>
-						</div>
-						<div class="author">
-{#							<img src="images/testimonials/testimonial2.jpg" class="avatar" alt="author" />#}
-							<a href="{% url 'about' %}"> {{ post.author }}</a>, {{ post.created }}
-						</div>
-						<p class="intro">
+                            <div class="title">
+                                <a href="{% url 'blog_post' post.id %}">{{ post.title }}</a>
+                            </div>
+                            <div class="author">
+                                {#							<img src="images/testimonials/testimonial2.jpg" class="avatar" alt="author" />#}
+                                <a href="{% url 'about' %}"> {{ post.author }}</a>, {{ post.created }}
+                            </div>
+                            <p class="intro">
 
-                            {{ post.body|truncatewords:35 }}
-						</p>
-						<a href="{% url 'blog_post' post.id  %}" class="continue-reading">Continue reading this post</a>
-					</div>
+                                {{ post.body|truncatewords:35 }}
+                            </p>
+                            <a href="{% url 'blog_post' post.id %}" class="continue-reading">Continue reading this
+                                post</a>
+                        </div>
                     {% endfor %}
 
-{#					<div class="pages">#}
-{#						<ul class="pagination">#}
-{#						  	<li><a href="#">&laquo;</a></li>#}
-{#						  	<li class="active"><a href="#">1</a></li>#}
-{#						  	<li><a href="#">2</a></li>#}
-{#						  	<li><a href="#">3</a></li>#}
-{#						  	<li><a href="#">4</a></li>#}
-{#						  	<li><a href="#">&raquo;</a></li>#}
-{#						</ul>#}
-{#					</div>#}
-{#				</div>#}
-				<div class="col-md-3 sidebar">
-{#					<div class="col-sm-6 col-sm-offset-3 newsletter">#}
-{#                <div class="signup clearfix">#}
-{#                    <p>#}
-{#                        Sign up for blog updates and technology news.#}
-{#                    </p>#}
-{##}
-{#                    <form>#}
-{#                        <input type="text" name="email" class="form-control newsletter"#}
-{#                               placeholder="Your email address"/>#}
-{#                        <input type="submit" value="Sign up"/>#}
-{#                    </form>#}
-{#                </div>#}
-{#            </div>#}
-					<div class="updates">
-						<strong>
-							Free blog updates
-							<i class="fa fa-rss"></i>
-						</strong>
-						<p>
-							Never miss an update.
-							Sign up  to receive an email whenever we post something in the blog.
-						</p>
-					</div>
-					<div class="follow-tw">
-						    <a target="_blank" href="https://twitter.com/travi88" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                    {#					<div class="pages">#}
+                    {#						<ul class="pagination">#}
+                    {#						  	<li><a href="#">&laquo;</a></li>#}
+                    {#						  	<li class="active"><a href="#">1</a></li>#}
+                    {#						  	<li><a href="#">2</a></li>#}
+                    {#						  	<li><a href="#">3</a></li>#}
+                    {#						  	<li><a href="#">4</a></li>#}
+                    {#						  	<li><a href="#">&raquo;</a></li>#}
+                    {#						</ul>#}
+                    {#					</div>#}
+                </div>
+                <div class="col-md-3 sidebar">
+                    {#					<div class="col-sm-6 col-sm-offset-3 newsletter">#}
+                    {#                <div class="signup clearfix">#}
+                    {#                    <p>#}
+                    {#                        Sign up for blog updates and technology news.#}
+                    {#                    </p>#}
+                    {##}
+                    {#                    <form>#}
+                    {#                        <input type="text" name="email" class="form-control newsletter"#}
+                    {#                               placeholder="Your email address"/>#}
+                    {#                        <input type="submit" value="Sign up"/>#}
+                    {#                    </form>#}
+                    {#                </div>#}
+                    {#            </div>#}
+                    <div class="updates">
+                        <strong>
+                            Free blog updates
+                            <i class="fa fa-rss"></i>
+                        </strong>
 
-					</div>
-					<div class="best-hits">
-						<strong>Check out our best hits:</strong>
-                                                {% for x in blogs %}
+                        <p>
+                            Follow on tweeter for blog updates.
+                            <br>
+                            <a target="_blank" href="https://twitter.com/travi88"
+                               class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
 
-						<a href="{% url 'blog_post' x.id  %}">{{ x.title }}</a>
-						{% endfor%}
+                        </p>
+                    </div>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="best-hits">
+                        <strong>Check out my latest posts:</strong>
+                        {% for x in blogs|slice:":4" %}
 
+                            <a href="{% url 'blog_post' x.id %}">{{ x.title }}</a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
 
 </body>
 </html>
