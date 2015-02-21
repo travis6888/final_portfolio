@@ -10,6 +10,7 @@ urlpatterns = patterns('',
                        url(r'^blog_post/(?P<post_id>\d+)/$', 'blog.views.blog_post', name='blog_post'),
                        url(r'^about/$', 'portfolio_main.views.about', name='about'),
                        url(r'^resume/$', 'portfolio_main.views.resume', name='resume'),
+                       url(r'^download/$', 'portfolio_main.views.download_resume', name='download_resume'),
 
 
                        url(r'^admin/', include(admin.site.urls)),
