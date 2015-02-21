@@ -111,10 +111,13 @@ STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
 # STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
 # MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
-MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
+# MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
 
-
+try:
+    from local_settings import *
+except ImportError:
+    pass
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
@@ -129,14 +132,10 @@ ALLOWED_HOSTS = ['*']
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # STATIC_ROOT = 'staticfiles'
-# STATIC_URL = '/static/'
+RESUME_URL = os.path.join(PROJECT_ROOT, "formal_portfolio/static", *MEDIA_URL.strip("/").split("/"))
 #
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
 # )
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
