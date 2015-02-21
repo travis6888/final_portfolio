@@ -114,7 +114,10 @@ STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
 # MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
 
-
+try:
+    from local_settings import *
+except ImportError:
+    pass
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
@@ -123,7 +126,7 @@ DATABASES['default'] =  dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 import os
@@ -136,7 +139,3 @@ RESUME_URL = os.path.join(PROJECT_ROOT, "formal_portfolio/static", *MEDIA_URL.st
 # )
 # STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
