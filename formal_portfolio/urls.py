@@ -6,8 +6,8 @@ from django.contrib import admin
 urlpatterns = patterns('',
                        url(r'^$', 'portfolio_main.views.home', name='home'),
                        url(r'^portfolio$', 'portfolio_main.views.portfolio', name='portfolio'),
-                       url(r'^blog/$', 'portfolio_main.views.blog', name='blog'),
-                       url(r'^blog_post/$', 'portfolio_main.views.blog_post', name='blog_post'),
+                       url(r'^blog/$', 'blog.views.blog', name='blog'),
+                       url(r'^blog_post/(?P<post_id>\d+)/$', 'blog.views.blog_post', name='blog_post'),
                        url(r'^about/$', 'portfolio_main.views.about', name='about'),
                        url(r'^resume/$', 'portfolio_main.views.resume', name='resume'),
 
