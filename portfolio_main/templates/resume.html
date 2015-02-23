@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-
+{% block meta %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,8 @@
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/theme.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/vendor/ionicons.min.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/compiled/resume.css' %}">
+
 
 	<!-- javascript -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -21,36 +24,327 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body id="home">
-	<header class="navbar navbar-inverse hero" role="banner">
-  		<div class="container">
-    		<div class="navbar-header">
-		      	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		      	</button>
-      			<a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>
-    		</div>
-    		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      			<ul class="nav navbar-nav navbar-right">
+<body id="posts">
+{% endblock %}
+{#	<header class="navbar navbar-inverse hero" role="banner">#}
+{#  		<div class="container">#}
+{#    		<div class="navbar-header">#}
+{#		      	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">#}
+{#			        <span class="icon-bar"></span>#}
+{#			        <span class="icon-bar"></span>#}
+{#			        <span class="icon-bar"></span>#}
+{#		      	</button>#}
+{#      			<a href="{% url 'home' %}" class="navbar-brand">Travis Cockcroft</a>#}
+{#    		</div>#}
+{#    		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">#}
+{#      			<ul class="nav navbar-nav navbar-right">#}
+{##}
+{#                    <li><a href="{% url 'about' %}"> About</a></li>#}
+{##}
+{#        			<li class="dropdown">#}
+{#        				<a href="#" class="dropdown-toggle" data-toggle="dropdown">#}
+{#          					Portfolio <b class="caret"></b>#}
+{#          				</a>#}
+{#          				<ul class="dropdown-menu">#}
+{#							<li><a href="{% url 'resume' %}">Resume</a></li>#}
+{#							<li><a href="{% url 'portfolio' %}">Projects</a></li>#}
+{##}
+{#				        </ul>#}
+{#        			</li>#}
+{##}
+{#							<li><a href="{% url 'blog' %}">Blog</a></li>#}
+{#      			</ul>#}
+{#    		</nav>#}
+{#  		</div>#}
+{#	</header>#}
+{% block content %}
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+        <div class="post" >
+            <h1 class=" animated fadeInLeft">Experience</h1>
+        </div>
+        <div class="post animated fadeInDown">
+            <div class="post rocketuresume">
+                <h3>Optimization Intern</h3>
+                <h4> RadiumOne</h4>
+                <h5>February 2015 - Present</h5>
+                </div>
 
-                    <li><a href="{% url 'about' %}"> About</a></li>
+                <div class="moreInfo">
+                    <ul>
+                    <li>AdTech = Big Data + Insights </li>
+{#                        <li>Support optimization team with managing campaigns for clients </li>#}
+{#                        <li>Work on projects for automation to drive significant efficency and productivity gains</li>#}
+{#                        <li>Analyzing data from Optimizely, Google Analytics, Google AdWords, Bing/Yahoo Search, and internal metrics </li>#}
+{#                        <li>Optimizing Google AdWord keywords and bid pricing</li>#}
+           </ul>
+            </div>
 
-        			<li class="dropdown">
-        				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          					Portfolio <b class="caret"></b>
-          				</a>
-          				<ul class="dropdown-menu">
-							<li><a href="{% url 'resume' %}">Resume</a></li>
-							<li><a href="{% url 'portfolio' %}">Projects</a></li>
+        </div>
+        <div class="post animated fadeInDown">
+            <div class="post rocketuresume">
+                <h3>Marketing Data Intern</h3>
+                <h4> Vertical Response</h4>
+                <h5>October 2014 – February 2015</h5>
+                </div>
 
-				        </ul>
-        			</li>
+                <div class="moreInfo">
+                    <ul>
+                    <li>Built a custom web application that made ad optimization 90% more efficient by reducing time spent analyzing data by 25+ hours <a target="_blank" href="http://www.github.com/travis6888/adops">Code</a> </li>
+                        <li>Cleaned and analyzed large amounts of data in excel to derive insights for optimization</li>
+                        <li>Constructed and analyzed reports such as day-parting, Pay-Per Click (PPC) bid pricing optimization, conversion rate optimization (CRO), and optimized negative keyword lists from search term reports</li>
+                        <li>Analyzed data from Optimizely, Google Analytics, Google AdWords, Bing/Yahoo Search, and internal metrics</li>
 
-							<li><a href="{% url 'blog' %}">Blog</a></li>
-      			</ul>
-    		</nav>
-  		</div>
-	</header>
-hi
+           </ul>
+            </div>
+
+        </div>
+          <div class="post animated fadeInDown">
+            <div class="post rocketuresume">
+                <h3>Web Developer Student</h3>
+                <h4> RocketSpace Inc.</h4>
+                <h5>June 2014 – August 2014 (3 months)</h5>
+                </div>
+
+                <div class="moreInfo">
+                    <ul>
+                    <p>RocketU bootcamp is a 10-week full stack developer program based around Python and Django
+                        while working with JavaScript, jQuery, AngularJS, REST and Tastypie. I was able to use the
+                        latest programming languages and build projects to showcase to employers and classmates.</p>
+           </ul>
+            </div>
+
+        </div>
+        <div class="post animated fadeInDown" >
+            <div class="post" id="dialog">
+                <h3>Research Analyst</h3>
+                <h4> Marcus & Millichap</h4>
+                <h5>March 2014 – September 2014 (7 months)</h5>
+            </div>
+            <div class="post">
+                <ul>
+                    <li>Worked in the Industrial property group.
+                    </li>
+                    <li>Worked on the development and distribution of
+                        compelling research content driving demand generation.
+                    </li>
+                    <li>Created and maintained an extensive
+                        database of industrial properties around the country in order to get more clients into
+                        our
+                        CRM and speed the effectiveness of comparable market analysis packets.
+                    </li>
+                </ul>
+            </div>
+        </div>
+{##}
+{#        <div class="post animated fadeInDown civitaf">#}
+{#            <div class="post">#}
+{#                <h3>Executive Assistant</h3>#}
+{#                <h4>Civitaf Construction and Development</h4>#}
+{#                <h5>July 2011 – August 2013 (2 years 2 months)</h5>#}
+{#            </div>#}
+{#            <div class="moreInfo">#}
+{#                <ul>#}
+{#                    <li> Worked directly with Owner/ President on 38 unit townhome project in Fremont, CA</li>#}
+{#                    <li>Assisted with property management of 11 personal properties</li>#}
+{#                    <li>#}
+{#                        Monitored construction and remodeling on income properties#}
+{#                    </li>#}
+{#                    <li>Studied ProForma cost analysis, market analysis, property acquisition techniques, city#}
+{#                        planning protocols, contracts, loans, construction management, and negotiations#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+        <div class="post animated fadeInDown APR">
+            <div class="post ">
+                <h3>Residential Real Estate Sales Intern</h3>
+                <h4> Alain Pinel Realtors</h4>
+                <h5>December 2009 – August 2013 (3 years 9 months)</h5>
+            </div>
+
+
+            <div class="moreInfo">
+
+                <ul>
+                    <li>Mentored by one of the top residential real estate brokers in the Silicon Valley.
+                    </li>
+                    <li>Assisted with transactions from 600k to 14 million, with over $50 million in
+                        sales.
+                    </li>
+                    <li>Pioneered new ways to acquire clients resulting in over $10 million dollars in new
+                        business.
+                    </li>
+                    <li>Oversaw construction remodels on multimillion-dollar homes.</li>
+                    <li>Researched housing market trends and inventory through effective due diligence.</li>
+                    <li>Created advertising, including flyers, mailers and print advertisements.</li>
+                    <li>Handled Facebook social media marketing.</li>
+                    <li>Professionally photographed multimillion dollar homes.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="post">
+
+            <h1 class="animated fadeInUp">Certifications and Licenses</h1>
+        </div>
+         <div class="post animated bounceInUp">
+            <div class="post">
+                <h3>Department of Real Estate (DRE) Salesperson License </h3>
+                <h4>California Department of Real Estate (DRE), License #01936457</h4>
+                <h5>October 2014 – Present</h5>
+            </div>
+        </div>
+        <div class="post animated bounceInUp">
+            <div class="post">
+                <h3>Certified California Residential Manager (CCRM) </h3>
+                <h4>California Apartment Association (CAA), License 133879</h4>
+                <h5>June 2013 – Present</h5>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="post">
+
+            <h1 class="animated fadeInRight">Education</h1>
+        </div>
+        <div class="post animated fadeInDown">
+
+            <div class="post">
+                <h3><a target="_blank" href="http://www.stmarys-ca.edu/about-smc"> St. Mary's College of California</a></h3>
+                <h4><a target="_blank" href="http://www.businessinsider.com/undergraduate-business-degrees-return-on-investment-2014-3#ixzz2xHhG9MId"> Bachelor of Science Business Administration: Finance</a></h4>
+                <h5>Graduate May 2015</h5>
+                <h5>Honor's Finance with Institutional GPA of 3.6 </h5>
+            </div>
+            <div class="post">
+                <div class="post">
+                    <h4>Projects</h4>
+                    <h5>Financial Management October 2013</h5>
+
+                    <p>Conducted a financial analysis of Visa and MasterCard using cash flow statements,
+                        balance
+                        sheets, income statements, and key ratios. Recommended MasterCard as a “buy”
+                        given the
+                        strong performance and key ratio measures. Recommended “buy” at $673.33 and
+                        stock rose
+                        to over $800 in the following three-month period. My report received the highest
+                        grade
+                        given.</p>
+                    <h5>Investments May 2014</h5>
+
+                    <p>Developed a investment portfolio that was focused on the efficient frontier and
+                        strongly
+                        believed in the Efficient Market Hypothesis. The portfolio received the highest
+                        grade in
+                        my investments class and outperformed the S&P 500 by 3% over the class
+                        period.</p>
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="animated fadeInRight">Awards</h1>
+        </div>
+        <div class="post animated fadeInUp delay-1">
+            <div class="post">
+                <h3><a target="_blank" href="http://www.stmarys-ca.edu/when-angels-listen-ideas-get-their-wings"> 1st Place Winner of Undergraduate Business Idea Competition</a></h3>
+                <h4><a target="_blank" href="http://www.keiretsuforum.com/"> Keiretsu Forum and Saint Mary's School of Economics and Business Adminstration</a></h4>
+                <h5>March 4th, 2014</h5>
+            </div>
+            <div class="post">
+                <div class="post">
+                    <p>Competition was put on by Keiretsu Forum, Northwestern Mutual, and Saint Mary's
+                        College of California: School of Economics and Business Administration. Keiretsu
+                        Forum is the largest angel investment group with over 300 million invested in
+                        350 companies</p>
+
+                    <p>Competition included: 2 minute business pitch followed by 4 minute Q&A and 4
+                        minutes of feedback from Keiretsu members.</p>
+
+                    <p>Competed against 2 other undergraduate student finalists and 15 total
+                        applications. </p>
+
+                    <p>Won undergraduate pitch and placed second in graduate and undergraduate audience
+                        voting. Also received $2000 and 3 hours of legal council at Fitzgerald Abbott
+                        and Beardsley and opportunity to present at Angel Opportunity Expo - a Keiretsu
+                        Forum premier gather of the angel capital community</p>
+
+                    <p>Pitched my business idea about a health services exchange software called
+                        Quickdoctors that focused on solving excess capacity with dynamic pricing. Quickdoctors was well received with investor interest and made wonderful connections. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <h1 class="animated fadeInLeft delay-2">Skills</h1>
+        </div>
+        <div class="row">
+            <div class=" col-md-6">
+                <div class="post animated rotateInDownLeft delay-2">
+                    <div class="post">
+                        <h3>Django</h3>
+
+                        <h3>Python</h3>
+
+                        <h3>Postgres</h3>
+                    </div>
+                </div>
+
+                <div class="post animated rotateInUpLeft delay-2">
+                    <div class="post">
+                                                <h3>HTML5</h3>
+
+
+                        <h3>CSS3</h3>
+
+                        <h3>Bootstrap</h3>
+
+                        <h3>LESS</h3>
+                                                <h3>SASS</h3>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class=" col-md-6">
+                <div class="post animated rotateInDownRight delay-2">
+                    <div class="post">
+
+                        <h3>Javascript</h3>
+
+                        <h3>JQuery</h3>
+
+                        <h3>Angular</h3>
+                    </div>
+                </div>
+                <div class="post animated rotateInUpRight delay-2">
+                    <div class="post">
+
+
+                        <h3>Financial Analysis</h3>
+
+                        <h3>Data Analysis</h3>
+
+
+                        <h3>Google Analytics</h3>
+
+                        <h3>Real Estate</h3>
+
+                        <h3>MS Office, MS Excel, MS Powerpoint, MS Word</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+{% endblock %}

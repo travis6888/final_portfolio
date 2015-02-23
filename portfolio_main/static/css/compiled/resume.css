@@ -1,0 +1,80 @@
+.resumeBlocks{
+    background-color: #000000;
+    border: #ffffff solid 1px  ;
+    border-radius: 10px;
+    margin: 10px 0px;
+    color: #ffffff;
+}
+.resumeTopic{
+    text-align: center;
+    padding: 10px;
+        color: #ffffff;
+
+
+}
+.resumeBody{
+    text-align: left;
+    padding: 10px;
+    padding-right: 15px;
+    text-justify: kashida;
+        color: #ffffff;
+
+}
+.resumeCategory{
+    text-align: center;
+    /*background-color: #000000;*/
+    /*border: #ffffff solid 1px  ;*/
+    /*border-radius: 50px;*/
+    /*vertical-align: 50%;*/
+        /*color: #ffffff;*/
+
+
+}
+ul{
+    /*list-style-type: none;*/
+}
+.resumeBlocks:hover{
+    -webkit-transition: .5s ease;
+    transition: .8s ease;
+    box-shadow: 0 0 20px black;
+}
+.delay-1 {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.delay-2 {
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.moreInfo{
+    /*display: none;*/
+    padding: 10px;
+}
+.knowMe{
+    background-color: #000000;
+    border-radius: 10px;
+    font-size: 33px;
+        /*font-family: Satisfy, cursive;*/
+    color: #ffffff;
+
+
+
+}
+.knowMe:hover{
+    -webkit-transition: .5s ease;
+    transition: .8s ease;
+    box-shadow: 0 0 10px #000000;
+}
+.greeting h1{
+    letter-spacing: 2px;
+    text-shadow: -4px 6px 6px rgba(150, 150, 150, 1);
+
+    margin: 50px;
+    font-size: 45px;
+        /*font-family: Satisfy, cursive;*/
+
+}
