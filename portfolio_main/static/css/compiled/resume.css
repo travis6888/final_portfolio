@@ -78,3 +78,8 @@ ul{
         /*font-family: Satisfy, cursive;*/
 
 }
+.post2{
+    background: gray;
+    border: 1px #000000;
+    border-radius: 20px;
+}
