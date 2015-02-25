@@ -53,7 +53,7 @@
 {#                    </ul>#}
 {#                </li>#}
 
-{#                <li><a href="{% url 'blog' %}">Blog</a></li>#}
+                <li><a href="{% url 'blog' %}">Blog</a></li>
             </ul>
         </nav>
     </div>
@@ -83,7 +83,7 @@
             <div class="col-md-12">
                 <h2>Optimization Analyst, Data Nerd, Entrepreneur, and Junior Web Developer!</h2>
 
-                <p>Yep, it sounds like a lot, but I love them all!</p>
+{#                <p>Yep, it sounds like a lot, but I love them all!</p>#}
             </div>
         </div>
         <div class="row feature">
@@ -91,8 +91,8 @@
                 <h4>Just a little bit about me...</h4>
 
                 <p>
-                    I am a learner! I always am reading new books (Try to finish one a week), I enjoy taking classes from
-                    online MOOC's, and I am constantly trying to learn and advance my technological knowledge.
+                    I am a learner! I am always reading new books (Try to finish one a week), I enjoy taking classes from
+                    online MOOC's, and I am constantly trying to learn and advance my technological skills.
                 </p>
 
                 <p>
@@ -108,27 +108,27 @@
                 <img src="{% static 'img/headshot.png' %}" class="img-responsive" alt="feature1"/>
             </div>
         </div>
-{#        <div class="divider"></div>#}
-{#        <div class="row feature backwards">#}
-{#            <div class="col-md-6 info">#}
-{#                <h4>Just like everyone else, my story is highly unique. This site is just a snapshot into who I#}
-{#                    am. </h4>#}
-{##}
-{#                <p>#}
-{#                    I am not the highly active blogger, but I try my best to put out quality over quantity.#}
-{##}
-{#                </p>#}
-{##}
-{#                <p>Please head over to the blog to read some of them. Please subscribe if you like them!</p>#}
-{#                <br>#}
-{#                <a href="{% url 'blog' %}" class="button">Head over to the blog</a>#}
-{##}
-{#            </div>#}
-{#            <div class="col-md-6 image">#}
-{#                <br>#}
-{#                <img src="{% static 'img/Plan_A.png' %}" class="img-responsive" alt="feature2"/>#}
-{#            </div>#}
-{#        </div>#}
+        <div class="divider"></div>
+        <div class="row feature backwards">
+            <div class="col-md-6 info">
+                <h4>Just like everyone else, my story is highly unique. This site is just a snapshot into who I
+                    am. </h4>
+
+                <p>
+                    I am not the most active blogger, but I try my best to put out quality over quantity.
+
+                </p>
+
+                <p>Please head over to the blog to read some of them. Please subscribe if you like them!</p>
+                <br>
+                <a href="{% url 'blog' %}" class="button">Head over to the blog</a>
+
+            </div>
+            <div class="col-md-6 image">
+                <br>
+                <img src="{% static 'img/Plan_A.png' %}" class="img-responsive" alt="feature2"/>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -153,9 +153,8 @@
 
                             <p>Whether small data or big data, I just want to dig right in and get to work.
                                 I love to connect the dots through statistical
-                                analysis and data visualization. I strive to tell wonderful and colorful stories through
-                                my data analysis.
-                                Always working to get better each day, luckily I have a great job to do just that!</p>
+                                analysis and data visualization. I strive to tell wonderful and colorful stories.
+                                Always working to get better!</p>
 {#                            <a href="#" class="btn btn-light">Learn More</a>#}
                         </div>
                     </div>
@@ -172,8 +171,8 @@
                             <p>This site is all built in django! Programming is one
                                 of my favorite hobbies, and has come in handy at work too! I can quickly whip up a
                                 minimum
-                                viable product (MVP) and present it. Python is great in data analysis as both an
-                                alternative to R, and
+                                viable product (MVP) and present it. Python is a great alternative to R for data analysis,
+                                and
                                 a way to clean data through regular expressions from NoSQL databases. </p>
 {#                            <a href="#" class="btn btn-light">Learn More</a>#}
                         </div>
@@ -195,8 +194,12 @@
                                 front of angel investors!</p>
 {#                            <a href="#" class="btn btn-light">Learn More</a>#}
                         </div>
-                    </div>
 
+                    </div>
+                    <div class="col-md-6 col-sm-offset-3">
+
+                                                    <a href="{% url 'download_resume' %}"  class="btn btn-light resume">Download Resume</a>
+</div>
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
