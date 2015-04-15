@@ -16,3 +16,6 @@ def blog_post(request, post_id):
     blog = Post.objects.get(pk=post_id)
     meta = MetaField.objects.filter(posts__id=post_id)
     return render(request, 'blog_post.html', {"blog": blog, "meta":meta})
+
+def coding(request):
+    return render(request, 'coding_zero.html')
