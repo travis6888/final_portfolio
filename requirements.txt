@@ -19,7 +19,7 @@ docutils==0.12
 gunicorn==19.2.1
 jmespath==0.7.1
 pathspec==0.3.3
-psycopg2==2.6
+
 python-dateutil==2.4.2
 requests==2.6.2
 six==1.9.0
