@@ -63,8 +63,12 @@ WSGI_APPLICATION = 'formal_portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'formal_portfolio',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -114,10 +118,10 @@ STATIC_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/static/'
 # MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
+# media:
+#     from local_settings import *
+# except ImportError:
+#     pass
 # # Parse database configuration from $DATABASE_URL
 # import dj_database_url
 # DATABASES['default'] =  dj_database_url.config()
