@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from formal_portfolio.settings import RESUME_URL
+from formal_portfolio.settings import MEDIA_URL
 
 
 def home(request):
@@ -29,7 +29,7 @@ def resume(request):
 
 def download_resume(request):
     new_pdf_file = 'Travis_Cockcroft_Resume.pdf'
-    pdf = (os.path.join(RESUME_URL, new_pdf_file))
+    pdf = (os.path.join(MEDIA_URL, new_pdf_file))
     with open(pdf, 'rb') as f:
         response = HttpResponse(f, content_type='application/pdf')
         response['Content-Disposition'] = 'attachment; filename='+new_pdf_file

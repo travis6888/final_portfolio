@@ -148,7 +148,7 @@ MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 # import os
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # # STATIC_ROOT = 'staticfiles'
-RESUME_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/travisportfolio/media'
+# RESUME_URL = 'https://s3-us-west-1.amazonaws.com/travisportfolio/media/Travis_Cockcroft_Resume.pdf?X-Amz-Date=20150824T031209Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=79af57a8c541cc294d4e2a564eb9edcba253bf09aa5b2650ba72ad825beb0ccb&X-Amz-Credential=ASIAJXCUXQOOGRJPC4HQ/20150824/us-west-1/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEOH//////////wEakAI374CiJQiij%2B/wdc5OmdbgK%2BNNrbfCLI0YI1GjUx3z8xbpjsGPxxdCthYOnwIp611KtWq9bIu2FHrdmORWBcB/W5TJpQNzwmge8KDOIsd3KS8zPKkNDwlbM/UUxd0mP1CWNqGnPm1VXCKmjSCvqrRWs89jmHoLb4YXu4%2Be4Nh/gBxaI2sZ3d5FYGtxJEkQAoBQGe2b%2BrAqcHqBEXwZHOFzyzwaVYJ3rbdXjafXeipWH%2B62%2BOHv1Bvxdfka5bhfQCJtX2Afrnx1ygYS83M/M3FK4H0ivY5RSVAyoPzbETK0PlIKSW641V0TPjAOgtTapyjuv3dSLph69j4iQk3YGSYY1V0o/ZL54oWg8tzy1lA5/CDJrOmuBQ%3D%3D'
 #
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
