@@ -148,7 +148,7 @@ MEDIA_URL = 'https://' + AWS_STORAGE_BUCKET_NAME + '.s3.amazonaws.com/media/'
 # import os
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # # STATIC_ROOT = 'staticfiles'
-RESUME_URL = os.path.join(PROJECT_ROOT, "formal_portfolio/static", *MEDIA_URL.strip("/").split("/"))
+RESUME_URL = os.path.join(MEDIA_URL, "formal_portfolio/static", *MEDIA_URL.strip("/").split("/"))
 #
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
