@@ -42,16 +42,16 @@
 
                 <li><a href="{% url 'about' %}"> About</a></li>
 
-{#                <li class="dropdown">#}
-{#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">#}
-{#                        Portfolio <b class="caret"></b>#}
-{#                    </a>#}
-{#                    <ul class="dropdown-menu">#}
-{#                        <li><a href="{% url 'resume' %}">Resume</a></li>#}
-                        <li><a href="{% url 'portfolio' %}">Projects</a></li>
+                {#                <li class="dropdown">#}
+                {#                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">#}
+                {#                        Portfolio <b class="caret"></b>#}
+                {#                    </a>#}
+                {#                    <ul class="dropdown-menu">#}
+                {#                        <li><a href="{% url 'resume' %}">Resume</a></li>#}
+                <li><a href="{% url 'portfolio' %}">Projects</a></li>
 
-{#                    </ul>#}
-{#                </li>#}
+                {#                    </ul>#}
+                {#                </li>#}
 
                 <li><a href="{% url 'blog' %}">Blog</a></li>
             </ul>
@@ -83,7 +83,7 @@
             <div class="col-md-12">
                 <h2>Optimization Analyst, Data Nerd, Entrepreneur, and Junior Web Developer!</h2>
 
-{#                <p>Yep, it sounds like a lot, but I love them all!</p>#}
+                {#                <p>Yep, it sounds like a lot, but I love them all!</p>#}
             </div>
         </div>
         <div class="row feature">
@@ -91,7 +91,8 @@
                 <h4>Just a little bit about me...</h4>
 
                 <p>
-                    I am a learner! I am always reading new books (Try to finish one non-fiction a week), I enjoy taking classes from
+                    I am a learner! I am always reading new books (Try to finish one non-fiction a week), I enjoy taking
+                    classes from
                     online MOOC's, and I am constantly trying to learn and advance my technological skills.
                 </p>
 
@@ -155,7 +156,7 @@
                                 I love to connect the dots through statistical
                                 analysis and data visualization. I strive to tell wonderful and colorful stories.
                                 Always working to get better!</p>
-{#                            <a href="#" class="btn btn-light">Learn More</a>#}
+                            {#                            <a href="#" class="btn btn-light">Learn More</a>#}
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -171,10 +172,11 @@
                             <p>This site is all built in django! Programming is one
                                 of my favorite hobbies, and has come in handy at work too! I can quickly whip up a
                                 minimum
-                                viable product (MVP) and present it. Python is a great alternative to R for data analysis,
+                                viable product (MVP) and present it. Python is a great alternative to R for data
+                                analysis,
                                 and
                                 a way to clean data through regular expressions from NoSQL databases. </p>
-{#                            <a href="#" class="btn btn-light">Learn More</a>#}
+                            {#                            <a href="#" class="btn btn-light">Learn More</a>#}
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -192,14 +194,16 @@
                                 me execute my wild and innovative ideas. I even used one of my ideas to win a business
                                 competition in
                                 front of angel investors!</p>
-{#                            <a href="#" class="btn btn-light">Learn More</a>#}
+                            {#                            <a href="#" class="btn btn-light">Learn More</a>#}
                         </div>
 
                     </div>
                     <div class="col-md-6 col-sm-offset-3">
+                        <a href="https://travisportfolio.s3.amazonaws.com/media/Travis_Cockcroft_Resume.pdf"
+                           class="btn btn-light resume">Download Resume</a>
 
-                                                    <a href="{% url 'download_resume' %}"  class="btn btn-light resume">Download Resume</a>
-</div>
+                        {#                                                    <a href="{% url 'download_resume' %}"  class="btn btn-light resume">Download Resume</a>#}
+                    </div>
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
@@ -222,13 +226,16 @@
                 <div class="slideshow">
 
                     <div class="slide active">
-                        <a target="_blank" href="https://wealthconcierge.herokuapp.com"><img src="{% static 'img/wealthy.png' %}"  alt="slide3"/></a>
+                        <a target="_blank" href="https://wealthconcierge.herokuapp.com"><img
+                                src="{% static 'img/wealthy.png' %}" alt="slide3"/></a>
                     </div>
                     <div class="slide">
-                        <a target="_blank" href="https://bookitquick.herokuapp.com"><img src="{% static 'img/bookit.png' %}" alt="slide4"/></a>
+                        <a target="_blank" href="https://bookitquick.herokuapp.com"><img
+                                src="{% static 'img/bookit.png' %}" alt="slide4"/></a>
                     </div>
                     <div class="slide">
-                        <a target="_blank" href="https://hobbyswap.herokuapp.com"><img src="{% static 'img/hobbyswap.png' %}" alt="slide1"/></a>
+                        <a target="_blank" href="https://hobbyswap.herokuapp.com"><img
+                                src="{% static 'img/hobbyswap.png' %}" alt="slide1"/></a>
                     </div>
 
                 </div>
@@ -258,13 +265,17 @@
                 </p>
 
                 <div class="logos">
-    <a target="_blank" href="https://github.com/travis6888" class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a>
-    <a target="_blank" href="https://www.linkedin.com/in/traviscockcroft" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
-    <a target="_blank" href="https://twitter.com/travi88" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                    <a target="_blank" href="https://github.com/travis6888" class="btn btn-social-icon btn-github"><i
+                            class="fa fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/traviscockcroft"
+                       class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                    <a target="_blank" href="https://twitter.com/travi88" class="btn btn-social-icon btn-twitter"><i
+                            class="fa fa-twitter"></i></a>
                 </div>
             </div>
 
             <br>
+
             <div class="row credits">
                 <div class="col-md-12">
                     Copyright © 2015. Travis Cockcroft
@@ -273,7 +284,6 @@
         </div>
     </div>
 </div>
-
 
 
 </body>
