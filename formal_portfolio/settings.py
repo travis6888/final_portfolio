@@ -100,9 +100,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, "formal_portfolio/static", *MEDIA_URL.st
 
 AWS_QUERYSTRING_AUTH = False
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_ACCESS_KEY_ID ='AKIAJFRYE5UJUMTHGNNA'
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'travisportfolio'
 AWS_PRELOAD_METADATA = True #helps collectstatic do updates
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
